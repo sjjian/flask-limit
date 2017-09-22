@@ -18,7 +18,10 @@ def callback():
 @limiter.limit(get_cookie, "3/10", callback)
 def hello_world(anything=None):
   return jsonify("message"="request success")
+  
+  
+  
 ```
 ## use
-"3/10" =>"3 count per 60 second"
-you can rewrite function create_count, get_count, incr_count by Inheritance LimiterMiXin, limit.py provide a redis classic.
+- "3/10" =>"3 count per 60 second"
+- you can rewrite function create_count, get_count, incr_count by Inheritance LimiterMiXin, limit.py provide a redis classic.
